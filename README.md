@@ -18,11 +18,11 @@ Present the rental service for parties, cultural events, and sports events in Ar
 
 - Sections: início, serviços, como trabalhamos, eventos, equipamento, galeria, contactos
 - Gallery filters (palcos, equipamento, festas) and a lightbox
-- Quote form: opens WhatsApp (`wa.me`) with the filled text. Nothing is stored on the site
+- Quote form: opens the WhatsApp business short link (`https://wa.me/message/5VB7SV74VVEKE1`) with the filled text. Nothing is stored on the site
 - Newsletter form: opens the visitor's email app (`mailto:sjgomesarouca@gmail.com`) with a prepared message. There is no mailing list
 - Map embed for Travessa do Cabo, Rossas, 4540-475 Arouca
 - Privacy note at `privacidade.html`, linked from the footer
-- The phone number is not shown as text. WhatsApp buttons use a `wa.me` link only
+- The phone number is not shown as text. WhatsApp buttons use the business short link `https://wa.me/message/5VB7SV74VVEKE1`
 
 ## Local run instructions
 
@@ -53,7 +53,8 @@ There is no build. Cloudflare Workers serves the repository as static assets (no
 Deploy with the Cloudflare GitHub integration (Workers Builds):
 
 - Production branch: `main`
-- Every other branch gets its own preview deployment
+- Every other branch gets its own preview deployment (`npx wrangler preview`)
+- `previews` in `wrangler.jsonc` is an empty block so that preview command can run. Assets stay in the top-level `assets` setting
 - No build command is required
 
 Check the asset bundle locally without logging in or deploying:
@@ -71,4 +72,4 @@ The public base URL used for the canonical link, Open Graph tags, `robots.txt`, 
 - There is no backend, database, or form storage.
 - The photographs are illustrative. The owner still needs to confirm where they come from and that they can be published.
 - The equipment section explains what an amplifier does. It does not list the SJGOMES inventory.
-- Quotes leave the site via WhatsApp. The business email published on the site is sjgomesarouca@gmail.com only.
+- Quotes leave the site via the WhatsApp business short link (`https://wa.me/message/5VB7SV74VVEKE1`). The business email published on the site is sjgomesarouca@gmail.com only.

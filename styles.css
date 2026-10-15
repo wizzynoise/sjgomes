@@ -25,6 +25,7 @@ body {
   font-family: var(--font);
   font-size: 1.05rem;
   line-height: 1.65;
+  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 picture { display: contents; }
@@ -145,6 +146,10 @@ p { margin: 0 0 1rem; color: var(--muted); }
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
 }
 .hero-copy { position: relative; z-index: 1; padding: 8rem 0 4.5rem; max-width: 48rem; }
+.hero h1 {
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
 .pill {
   display: inline-flex; align-items: center; gap: 0.7rem;
   border: 1px solid var(--line); background: rgba(255,255,255,0.05);
@@ -253,6 +258,7 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
 }
 .lightbox::backdrop { background: rgba(0,0,0,0.72); }
 .lightbox img { width: 100%; max-height: 75vh; object-fit: contain; background: #000; border-radius: 0.6rem; }
+.lightbox img[hidden] { display: none !important; }
 .lightbox p { margin: 0.6rem 0 0; }
 .lightbox form { display: flex; justify-content: flex-end; margin-bottom: 0.5rem; }
 
@@ -267,6 +273,13 @@ input:focus, select:focus, textarea:focus, button:focus-visible, a:focus-visible
   .gallery { grid-template-columns: 1fr 1fr 1fr; }
   .detail-list { grid-template-columns: 1fr 1fr; }
   .detail-list article:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(1.7rem, 8.5vw, 2.4rem); }
+  h1 { overflow-wrap: anywhere; hyphens: auto; }
+}
+@media (max-width: 370px) {
+  .page-top h1 { font-size: clamp(1.95rem, 9.2vw, 2.25rem); }
 }
 @media (max-width: 860px) {
   .nav {

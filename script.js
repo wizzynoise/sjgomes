@@ -71,8 +71,14 @@
         lightboxImg.onerror = null;
         if (fallback) lightboxImg.src = fallback;
       };
+      lightboxImg.hidden = false;
       lightboxImg.src = shot.getAttribute("data-full");
       lightbox.showModal();
+    });
+
+    lightbox.addEventListener("close", function () {
+      lightboxImg.hidden = true;
+      lightboxImg.removeAttribute("src");
     });
   }
 
@@ -86,7 +92,7 @@
     ];
     if (data.get("data")) lines.push("Data: " + data.get("data"));
     if (data.get("mensagem")) lines.push("Mensagem: " + data.get("mensagem"));
-    var url = "https://wa.me/351934467004?text=" + encodeURIComponent(lines.join("\n"));
+    var url = "https://wa.me/message/5VB7SV74VVEKE1?text=" + encodeURIComponent(lines.join("\n"));
     window.open(url, "_blank", "noopener");
   });
 
