@@ -1,0 +1,15 @@
+# Tooling and docs — not part of the public site
+README.md
+wrangler.jsonc
+wrangler.toml
+.assetsignore
+.gitignore
+.git
+.git*
+.dev.vars
+.env
+.env.*
+*.log
+.DS_Store
+node_modules
+.wrangler

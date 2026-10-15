@@ -27,6 +27,7 @@ body {
   line-height: 1.65;
 }
 img { max-width: 100%; display: block; }
+picture { display: contents; }
 a { color: var(--sky); }
 h1, h2, h3 { font-family: var(--display); letter-spacing: -0.03em; line-height: 1.12; margin: 0 0 0.7rem; }
 h1 { font-size: clamp(2.4rem, 6vw, 4.6rem); font-weight: 800; }
@@ -46,6 +47,7 @@ p { margin: 0 0 1rem; color: var(--muted); }
 .wrap { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; }
 .narrow { width: min(46rem, calc(100% - 2rem)); }
 .section { padding: 5rem 0; }
+.page-top { padding-top: 7.5rem; }
 .section-alt { background: var(--bg-alt); }
 .section-lead { max-width: 40rem; }
 
