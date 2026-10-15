@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sjgomes.sjgomesarouca.workers.dev/sitemap.xml

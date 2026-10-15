@@ -1,0 +1,8 @@
+{
+  // Static assets only. There is no Worker script.
+  "name": "sjgomes",
+  "compatibility_date": "2026-10-15",
+  "assets": {
+    "directory": "."
+  }
+}
