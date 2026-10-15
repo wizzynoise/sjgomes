@@ -53,7 +53,8 @@ There is no build. Cloudflare Workers serves the repository as static assets (no
 Deploy with the Cloudflare GitHub integration (Workers Builds):
 
 - Production branch: `main`
-- Every other branch gets its own preview deployment
+- Every other branch gets its own preview deployment (`npx wrangler preview`)
+- `previews` in `wrangler.jsonc` is an empty block so that preview command can run. Assets stay in the top-level `assets` setting
 - No build command is required
 
 Check the asset bundle locally without logging in or deploying:
